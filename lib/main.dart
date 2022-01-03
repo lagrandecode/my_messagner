@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Messanger',
       theme: ThemeData(
-        textTheme: GoogleFonts.montserratSubrayadaTextTheme()
+        textTheme: GoogleFonts.montserratTextTheme(),
 
           ),
       home: Homepage(),

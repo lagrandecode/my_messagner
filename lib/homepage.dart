@@ -14,10 +14,13 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+
+  //initialising date and time
   var dateTime;
   var formattedDateTime;
   var year;
   var formattedYear;
+  var greetings;
 
   @override
   void initState() {
@@ -27,7 +30,9 @@ class _HomepageState extends State<Homepage> {
     formattedDateTime = DateFormat("EEE, d MMM").format(dateTime);
     year = DateTime(DateTime.now().year);
     formattedYear = DateFormat.YEAR;
+    greetings = greetingMessage();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +55,29 @@ class _HomepageState extends State<Homepage> {
                 "Hello, Oluwaseun",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
               ),
+            ),
+            Container(
+              margin: marginLeft18,
+              child: Text("Good ${greetings} wash your hands 😷"),
             )
           ],
         ),
       ),
     );
   }
+  // this is where the greetings was inintialise
+
+  String greetingMessage(){
+    var hour = DateTime.now().hour;
+    if( hour < 12){
+      return "morning";
+    }
+    if( hour < 17){
+      return "afternoon";
+    }
+    return "evening";
+  }
+
 
   // this is the method for the appbar, so if
 // you want to change anything on the appbar then change is here.

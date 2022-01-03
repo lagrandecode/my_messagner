@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:my_messanger/constants/colors.dart';
 import 'package:my_messanger/constants/padding.dart';
+import 'package:my_messanger/widgets/carousel_holder.dart';
+import 'package:my_messanger/widgets/carousel_slide.dart';
 import 'package:my_messanger/widgets/home_side_drawer.dart';
 
 class Homepage extends StatefulWidget {
   var dateTime;
+
 
   @override
   _HomepageState createState() => _HomepageState();
@@ -22,6 +25,7 @@ class _HomepageState extends State<Homepage> {
   var formattedYear;
   var greetings;
 
+
   @override
   void initState() {
     // TODO: implement initState
@@ -31,6 +35,7 @@ class _HomepageState extends State<Homepage> {
     year = DateTime(DateTime.now().year);
     formattedYear = DateFormat.YEAR;
     greetings = greetingMessage();
+
   }
 
 
@@ -59,7 +64,8 @@ class _HomepageState extends State<Homepage> {
             Container(
               margin: marginLeft18,
               child: Text("Good ${greetings} wash your hands 😷"),
-            )
+            ),
+            CarouselSlide(),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_messanger/homepage.dart';
 
 void main() {
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Messanger',
       theme: ThemeData(
+        textTheme: GoogleFonts.montserratSubrayadaTextTheme()
+
           ),
       home: Homepage(),
     );

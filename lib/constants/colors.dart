@@ -8,3 +8,5 @@ const Color kyellow = Color(0xF8BD6F);
 const Color kwhite = Color(0x1D1D1D);
 const Color ktransparent = Colors.transparent;
 
+const TextStyle style1 = TextStyle(color: kblack, fontSize: 15, fontWeight: FontWeight.bold);
+

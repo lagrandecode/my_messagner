@@ -1,27 +1,56 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:my_messanger/constants/colors.dart';
+import 'package:my_messanger/constants/padding.dart';
 import 'package:my_messanger/widgets/home_side_drawer.dart';
 
 class Homepage extends StatefulWidget {
-  static DateTime dateToday =
-      DateTime(DateTime.now().day, DateTime.now().month, DateTime.now().year);
-
+  var dateTime;
 
   @override
   _HomepageState createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
+  var dateTime;
+  var formattedDateTime;
+  var year;
+  var formattedYear;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    dateTime = DateTime.now();
+    formattedDateTime = DateFormat("EEE, d MMM").format(dateTime);
+    year = DateTime(DateTime.now().year);
+    formattedYear = DateFormat.YEAR;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(""),
+            Container(
+              margin: marginLeft18,
+              child: Text(
+                "${formattedDateTime}",
+                style: style1,
+              ),
+            ),
+            Container(
+              margin: marginLeft18,
+              child: Text(
+                "Hello, Oluwaseun",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+              ),
+            )
           ],
         ),
       ),

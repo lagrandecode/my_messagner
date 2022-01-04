@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:my_messanger/constants/colors.dart';
 import 'package:my_messanger/constants/padding.dart';
-import 'package:my_messanger/widgets/carousel_holder.dart';
+
 import 'package:my_messanger/widgets/carousel_slide.dart';
+import 'package:my_messanger/widgets/grid_view.dart';
 import 'package:my_messanger/widgets/home_side_drawer.dart';
 
 class Homepage extends StatefulWidget {
@@ -66,6 +67,8 @@ class _HomepageState extends State<Homepage> {
               child: Text("Good ${greetings} wash your hands 😷"),
             ),
             CarouselSlide(),
+            SizedBox(height: 10,),
+            GridViewBuilder(),
           ],
         ),
       ),

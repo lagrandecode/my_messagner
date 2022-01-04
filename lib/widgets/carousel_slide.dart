@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:my_messanger/constants/colors.dart';
 import 'package:my_messanger/constants/padding.dart';
 import 'package:my_messanger/model/carousel.dart';
-import 'package:my_messanger/widgets/carousel_holder.dart';
+
 
 class CarouselSlide extends StatefulWidget {
   @override

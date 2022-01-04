@@ -21,7 +21,7 @@ class _HomepageState extends State<Homepage> {
   //initialising date and time
   var dateTime;
   var formattedDateTime;
-  var year;
+  var currentYear;
   var formattedYear;
   var greetings;
 
@@ -32,7 +32,7 @@ class _HomepageState extends State<Homepage> {
     super.initState();
     dateTime = DateTime.now();
     formattedDateTime = DateFormat("EEE, d MMM").format(dateTime);
-    year = DateTime(DateTime.now().year);
+    currentYear = DateTime.now().year;
     formattedYear = DateFormat.YEAR;
     greetings = greetingMessage();
 

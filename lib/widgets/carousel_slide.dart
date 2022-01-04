@@ -13,6 +13,8 @@ class CarouselSlide extends StatefulWidget {
 class _CarouselSlideState extends State<CarouselSlide> {
   CarouselController _controller = CarouselController();
   int _currentSlide = 0;
+
+  // these are the image used for the carousel slider. the images can also be embedded in the model of carousel
   final List<String> imgurl = [
     "assets/images/img1.jpeg",
     "assets/images/img2.jpeg",
@@ -78,12 +80,12 @@ class _CarouselSlideState extends State<CarouselSlide> {
             imgurl.asMap().entries.map((e) => (GestureDetector(
               onTap: ()=> _controller.animateToPage(e.key),
               child: Container(
-                height: 2,
+                height: _currentSlide == e.key? 3 : 2,
                 width: _currentSlide == e.key? 20: 10,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 8.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: _currentSlide == e.key? Colors.red : Colors.black,
+                  color: _currentSlide == e.key? Colors.red : Colors.red[100],
                 ),
               ),
             ))).toList()

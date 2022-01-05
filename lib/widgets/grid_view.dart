@@ -27,12 +27,13 @@ class GridViewBuilder extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            margin: const EdgeInsets.only(top: 40),
+            height: 120,
+            margin: const EdgeInsets.only(top: 30),
             child: Center(
               child: Image.asset(slide.img),
             ),
           ),
-          Text(slide.name, style: const TextStyle(fontWeight: FontWeight.bold,), textAlign: TextAlign.center,)
+          Text(slide.name, style: TextStyle(fontWeight: FontWeight.bold, color: slide.txtColor), textAlign: TextAlign.center,)
         ],
       )
     );

@@ -10,7 +10,7 @@ class SliderHolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: MediaQuery.of(context).size.height,
       child: GridView.builder(
         itemCount: slides.length,
           shrinkWrap: true,

@@ -8,6 +8,7 @@ import 'package:my_messanger/constants/padding.dart';
 import 'package:my_messanger/widgets/carousel_slide.dart';
 import 'package:my_messanger/widgets/grid_view.dart';
 import 'package:my_messanger/widgets/home_side_drawer.dart';
+import 'package:my_messanger/widgets/slider_holder.dart';
 
 class Homepage extends StatefulWidget {
   var dateTime;
@@ -68,7 +69,7 @@ class _HomepageState extends State<Homepage> {
             ),
             CarouselSlide(),
             SizedBox(height: 10,),
-            GridViewBuilder(),
+            SliderHolder(),
           ],
         ),
       ),

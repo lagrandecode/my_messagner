@@ -1,18 +1,40 @@
-
 import 'package:flutter/material.dart';
-
+import 'package:my_messanger/constants/padding.dart';
+import 'package:my_messanger/model/grid_view.dart';
 
 
 class GridViewBuilder extends StatelessWidget {
+  GridViewSlide slide;
+
+
+  GridViewBuilder(this.slide);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
-      width: 80,
-      decoration: BoxDecoration(
-        color: Colors.red
-      ),
 
+      margin: const EdgeInsets.all(10),
+      height: 200,
+      width: 190,
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
+            topRight: Radius.circular(10),
+            topLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+            bottomLeft: Radius.circular(0)),
+        color: slide.colorBg,
+      ),
+      child: Column(
+        children: <Widget>[
+          Container(
+            margin: const EdgeInsets.only(top: 40),
+            child: Center(
+              child: Image.asset(slide.img),
+            ),
+          ),
+          Text(slide.name, style: const TextStyle(fontWeight: FontWeight.bold,), textAlign: TextAlign.center,)
+        ],
+      )
     );
   }
 }

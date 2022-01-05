@@ -30,49 +30,47 @@ class _CarouselSlideState extends State<CarouselSlide> {
         Container(
           margin: marginLeftRightTop18,
           height: 150,
-          child: Expanded(
-            child: CarouselSlider(
-              carouselController: _controller,
-              options: CarouselOptions(
-                  height: 200,
-                  autoPlay: true,
-                  enlargeCenterPage: true,
-                  aspectRatio: 1.0,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      _currentSlide = index;
-                    });
-                  }),
-              items: imgurl
-                  .map(
-                    (e) => Container(
-                      //
-                      width: MediaQuery.of(context).size.width,
-                      height: 120,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        ),
+          child: CarouselSlider(
+            carouselController: _controller,
+            options: CarouselOptions(
+                height: 200,
+                autoPlay: true,
+                enlargeCenterPage: true,
+                aspectRatio: 1.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentSlide = index;
+                  });
+                }),
+            items: imgurl
+                .map(
+                  (e) => Container(
+                    //
+                    width: MediaQuery.of(context).size.width,
+                    height: 120,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
                       ),
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          topRight: Radius.circular(10),
-                          bottomRight: Radius.circular(10),
-                        ),
-                        child: Image.asset(
-                          e,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      //
                     ),
-                  )
-                  .toList(),
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                      child: Image.asset(
+                        e,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    //
+                  ),
+                )
+                .toList(),
 
-            ),
           ),
         ),
         Row(mainAxisAlignment: MainAxisAlignment.center,

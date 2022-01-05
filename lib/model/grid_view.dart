@@ -7,8 +7,9 @@ class GridViewSlide {
   String desc;
   Color colorBg;
   Color txtColor;
+  int pages;
 
-  GridViewSlide(this.name, this.img, this.desc, this.colorBg, this.txtColor);
+  GridViewSlide(this.name, this.img, this.desc, this.colorBg, this.txtColor, this.pages);
 
   static List<GridViewSlide> generateGridViewSlide() {
     return [
@@ -18,6 +19,7 @@ class GridViewSlide {
         "Ready to delivery to your door step",
         kBg1,
         Color(0xff5e92e3),
+        0,
       ),
       GridViewSlide(
         "Book a Courier",
@@ -25,14 +27,15 @@ class GridViewSlide {
         "Ready to delivery to your door step",
         kBg2,
         Color(0xff7f40f7),
+        1,
       ),
       GridViewSlide(
         "Order for Food",
         "assets/images/food.png",
         "Ready to delivery to your door step",
         kBg3,
-
         Color(0xffee73b8),
+        2,
       ),
       GridViewSlide(
         "Cleaning Service",
@@ -40,6 +43,7 @@ class GridViewSlide {
         "Ready to delivery to your door step",
         kBg4,
         Color(0xff16ae5d),
+        3,
       ),
     ];
   }

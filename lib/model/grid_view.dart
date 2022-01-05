@@ -24,14 +24,15 @@ class GridViewSlide {
         "assets/images/courier.png",
         "Ready to delivery to your door step",
         kBg2,
-        Color(0xffee73b8),
+        Color(0xff7f40f7),
       ),
       GridViewSlide(
         "Order for Food",
         "assets/images/food.png",
         "Ready to delivery to your door step",
         kBg3,
-        Color(0xff7f40f7),
+
+        Color(0xffee73b8),
       ),
       GridViewSlide(
         "Cleaning Service",

@@ -27,8 +27,8 @@ class GridViewBuilder extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            height: 120,
-            margin: const EdgeInsets.only(top: 30),
+            height: 100,
+            margin: const EdgeInsets.only(top: 15),
             child: Center(
               child: Image.asset(slide.img),
             ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_messanger/homepage.dart';
+import 'package:my_messanger/screens/onboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
       title: 'My Messanger',
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
+        primaryColor: Colors.deepPurple,
 
           ),
-      home: Homepage(),
+      home: OnBoardScreen(),
     );
   }
 }

@@ -44,7 +44,6 @@ class _GridViewBuilderState extends State<GridViewBuilder> {
       onTap: (){
         _navigateIndex();
         },
-
       child: Container(
         margin: const EdgeInsets.all(10),
         height: 200,

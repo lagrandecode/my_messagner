@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_messanger/constants/padding.dart';
+import 'package:my_messanger/screens/register.dart';
 
 class LoginRegisterLink extends StatelessWidget {
   @override
@@ -41,7 +42,9 @@ class LoginRegisterLink extends StatelessWidget {
               ),
             ),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Register(),));
+              },
               child: const Text(
                 "Login",
                 style: TextStyle(
@@ -68,7 +71,9 @@ class LoginRegisterLink extends StatelessWidget {
               ),
             ),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Register(),));
+              },
               child: const Text(
                 "Register",
                 style: TextStyle(

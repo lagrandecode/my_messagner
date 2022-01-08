@@ -1,6 +1,8 @@
 import 'dart:developer';
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:my_messanger/constants/colors.dart';
 import 'package:my_messanger/constants/padding.dart';
@@ -58,10 +60,20 @@ class _HomepageState extends State<Homepage> {
             ),
             Container(
               margin: marginLeft18,
-              child: Text(
-                "Hello, Oluwaseun",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+              // the animatedtestkit is good for UI but it makes the computer slow
+
+              child: AnimatedTextKit(
+                animatedTexts: [TyperAnimatedText("Hello, Oluwaseun",textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Theme.of(context).primaryColor), speed: const Duration(milliseconds: 200),),],
+                totalRepeatCount: 1,
+                pause: const Duration(milliseconds: 200),
+                displayFullTextOnTap: true,
+                stopPauseOnTap: true,
               ),
+
+              // child: Text(
+              //   "Hello, Oluwaseun",
+              //   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+              // ),
             ),
             Container(
               margin: marginLeft18,

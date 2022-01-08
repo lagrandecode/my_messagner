@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_messanger/homepage.dart';
 import 'package:my_messanger/model/onboard_screen.dart';
+import 'package:my_messanger/screens/login_register_link.dart';
 
 class OnBoardScreen extends StatefulWidget {
   @override
@@ -110,7 +111,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                 if (swipeIndex == screen.length - 1) {
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (_) => Homepage(),
+                      builder: (_) => LoginRegisterLink(),
                     ),
                   );
                 }

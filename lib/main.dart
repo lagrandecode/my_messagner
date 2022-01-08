@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My Messanger',
+      title: 'My Errand Boy',
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
         primaryColor: Colors.deepPurple,

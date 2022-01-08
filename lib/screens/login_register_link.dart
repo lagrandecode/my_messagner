@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_messanger/constants/padding.dart';
 import 'package:my_messanger/screens/register.dart';
 
 class LoginRegisterLink extends StatelessWidget {
@@ -9,27 +8,27 @@ class LoginRegisterLink extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Center(
+          const Center(
             child: CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage("assets/images/logo.png"),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
-            "My Messanger",
+            "My Errand Boy",
             style: TextStyle(
-                fontSize: 35,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).primaryColor),
           ),
-          SizedBox(
+          const SizedBox(
             height: 150,
           ),
           Container(
-            margin: marginLeftRightTop18,
+            margin: EdgeInsets.only(left: 30, right: 30, top: 10),
             height: 40,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -43,7 +42,9 @@ class LoginRegisterLink extends StatelessWidget {
             ),
             child: TextButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Register(),));
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => Register(),
+                ));
               },
               child: const Text(
                 "Login",
@@ -54,11 +55,11 @@ class LoginRegisterLink extends StatelessWidget {
               ),
             ),
           ),
-
-          SizedBox(height: 10,),
-
+          const SizedBox(
+            height: 10,
+          ),
           Container(
-            margin: marginLeftRightTop18,
+            margin: const EdgeInsets.only(left: 30, right: 30, top: 10),
             height: 40,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -72,7 +73,9 @@ class LoginRegisterLink extends StatelessWidget {
             ),
             child: TextButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Register(),));
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => Register(),
+                ));
               },
               child: const Text(
                 "Register",

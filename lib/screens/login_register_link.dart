@@ -12,6 +12,7 @@ class LoginRegisterLink extends StatelessWidget {
         children: <Widget>[
           const Center(
             child: CircleAvatar(
+              backgroundColor: Color(0xFFE3D9D9),
               radius: 50,
               backgroundImage: AssetImage("assets/images/logo.png"),
             ),

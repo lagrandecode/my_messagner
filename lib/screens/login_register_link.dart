@@ -46,7 +46,7 @@ class LoginRegisterLink extends StatelessWidget {
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => Homepage(),
+                  builder: (_) => Login(),
                 ));
               },
               child: const Text(

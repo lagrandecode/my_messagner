@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:my_messanger/homepage.dart';
 import 'package:my_messanger/screens/login_register_link.dart';
 
 class Register extends StatefulWidget {
@@ -62,6 +63,25 @@ class _RegisterState extends State<Register> {
             _buildTextIdentifier("First Name"),
             _buildTextFieldInput(context, TextFormField(
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 contentPadding: EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "First Name",
@@ -81,6 +101,25 @@ class _RegisterState extends State<Register> {
             _buildTextIdentifier("Last Name"),
             _buildTextFieldInput(context, TextFormField(
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 contentPadding: EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "Last Name",
@@ -100,6 +139,25 @@ class _RegisterState extends State<Register> {
             _buildTextIdentifier("Email Address"),
             _buildTextFieldInput(context, TextFormField(
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 contentPadding: EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "Email Address",
@@ -119,6 +177,25 @@ class _RegisterState extends State<Register> {
             _buildTextIdentifier("Phone Number"),
             _buildTextFieldInput(context, TextFormField(
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 contentPadding: EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "Phone Number",
@@ -137,6 +214,25 @@ class _RegisterState extends State<Register> {
             _buildTextIdentifier("Other Phone Number"),
             _buildTextFieldInput(context, TextFormField(
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 contentPadding: EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "Optional",
@@ -156,6 +252,25 @@ class _RegisterState extends State<Register> {
             _buildTextFieldInput(context, TextFormField(
               obscureText: !_isPasswordVisible,
               decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                    bottomLeft: Radius.circular(1),
+                    bottomRight: Radius.circular(10),
+                  ),
+
+                ),
                 suffixIcon: IconButton(
                   onPressed: (){
                     setState(() {
@@ -196,7 +311,7 @@ class _RegisterState extends State<Register> {
               child: TextButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => LoginRegisterLink(),
+                    builder: (_) => Homepage(),
                   ));
                 },
                 child: const Text(
@@ -230,7 +345,7 @@ class _RegisterState extends State<Register> {
   _buildTextFieldInput(BuildContext context, TextFormField textFormField) {
     return Container(
       margin: const EdgeInsets.only(left: 15, right: 15),
-      height: 50,
+      height: 45,
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
@@ -239,7 +354,7 @@ class _RegisterState extends State<Register> {
           bottomLeft: Radius.circular(1),
           bottomRight: Radius.circular(10),
         ),
-        color: Colors.grey.withOpacity(0.4),
+        color: Color(0xffeff0f5),
       ),
       child: textFormField,
     );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_messanger/homepage.dart';
+import 'package:my_messanger/screens/login.dart';
 import 'package:my_messanger/screens/register.dart';
 
 class LoginRegisterLink extends StatelessWidget {
@@ -43,7 +45,7 @@ class LoginRegisterLink extends StatelessWidget {
             child: TextButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => Register(),
+                  builder: (_) => Homepage(),
                 ));
               },
               child: const Text(

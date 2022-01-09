@@ -35,7 +35,7 @@ class _HomepageState extends State<Homepage> {
     // TODO: implement initState
     super.initState();
     dateTime = DateTime.now();
-    formattedDateTime = DateFormat("EEE, d MMM").format(dateTime);
+    formattedDateTime = DateFormat('MMM d, yyyy | EEEEEE').format(dateTime);
     currentYear = DateTime.now().year;
     formattedYear = DateFormat.YEAR;
     greetings = greetingMessage();

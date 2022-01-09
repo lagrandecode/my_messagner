@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(),
         primaryColor: Colors.deepPurple,
-
           ),
       home: OnBoardScreen(),
     );

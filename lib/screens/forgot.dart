@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:my_messanger/homepage.dart';
-import 'package:my_messanger/screens/forgot.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:my_messanger/screens/register.dart';
 
-class Login extends StatefulWidget {
+import '../homepage.dart';
+
+
+class ForgotPassword extends StatefulWidget {
+
   @override
-  _LoginState createState() => _LoginState();
+  _ForgotPasswordState createState() => _ForgotPasswordState();
 }
 
-class _LoginState extends State<Login> {
-
+class _ForgotPasswordState extends State<ForgotPassword> {
 
   late String firstName;
   late String email;
@@ -24,7 +25,6 @@ class _LoginState extends State<Login> {
     _isPasswordVisible = false;
     super.initState();
   }
-
 
 
 
@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Text(
-                "Login",
+                "Forgot Password",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 40,
@@ -78,9 +78,9 @@ class _LoginState extends State<Login> {
                     bottomRight: Radius.circular(10),
                   ),
                 ),
-                focusedErrorBorder: OutlineInputBorder(
+                focusedErrorBorder: const OutlineInputBorder(
                   borderSide: BorderSide(width: 1, color: Colors.redAccent),
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topRight: Radius.circular(10),
                     topLeft: Radius.circular(10),
                     bottomLeft: Radius.circular(1),
@@ -88,10 +88,10 @@ class _LoginState extends State<Login> {
                   ),
 
                 ),
-                contentPadding: EdgeInsets.all(10),
+                contentPadding: const EdgeInsets.all(10),
                 border: InputBorder.none,
                 hintText: "Email Address",
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: Colors.grey
@@ -103,50 +103,10 @@ class _LoginState extends State<Login> {
             // this is the phone number of the users
 
             // this will collect the password of the users
-            SizedBox(height: 20,),
-
-            _buildTextIdentifier("Your Password"),
-            _buildTextFieldInput(context, TextFormField(
-              obscureText: !_isPasswordVisible,
-              decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(width: 1, color: Theme.of(context).primaryColor),
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(1),
-                    bottomRight: Radius.circular(10),
-                  ),
-                ),
-                focusedErrorBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(width: 1, color: Colors.redAccent),
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(1),
-                    bottomRight: Radius.circular(10),
-                  ),
-                ),
-                suffixIcon: IconButton(
-                  onPressed: (){
-                    setState(() {
-                      _isPasswordVisible =! _isPasswordVisible;
-                    });
-                  },
-                  icon: (_isPasswordVisible ? Icon(Icons.visibility, color: Colors.redAccent,) : Icon(Icons.visibility_off, color: Colors.grey,)),
+            const SizedBox(height: 20,),
 
 
-                ),
-                contentPadding: EdgeInsets.all(10),
-                border: InputBorder.none,
-                hintText: "Password",
-                hintStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Colors.grey
-                ),
-              ),
-            ),),
+
 
             const SizedBox(height: 50,),
 
@@ -166,12 +126,11 @@ class _LoginState extends State<Login> {
               ),
               child: TextButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => Homepage(),
-                  ));
+                 // RESET PASSWROD HERE
+
                 },
                 child: const Text(
-                  "Login",
+                  "RESET PASSWORD",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -183,19 +142,10 @@ class _LoginState extends State<Login> {
             SizedBox(height: 30,),
 
             GestureDetector(
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>Register(),),);
-              },
-                child: Center(child: Text("Don't have an account? Register", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor),),)),
-
-            SizedBox(height: 30,),
-
-            Center(child: InkWell(
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (_)=>ForgotPassword(),),);
-              },
-                child: const Text("Forgot Password?", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,),)),),
-
+                onTap: (){
+                  Navigator.of(context).pop();
+                },
+                child: Center(child: Text("Go Back", textAlign: TextAlign.center, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor),),)),
 
           ],
         ),
@@ -217,8 +167,8 @@ class _LoginState extends State<Login> {
       margin: const EdgeInsets.only(left: 15, right: 15),
       height: 45,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
           topRight: Radius.circular(10),
           topLeft: Radius.circular(10),
           bottomLeft: Radius.circular(1),

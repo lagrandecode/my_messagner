@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "834248779971",
+    "project_id": "sendme-6aa27",
+    "storage_bucket": "sendme-6aa27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834248779971:android:5b42fa9208b4d59210da76",
+        "android_client_info": {
+          "package_name": "langrangecode.com.my_messanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834248779971-r3c0b8v9g2oqib425d968tt6lg63jtmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOO3Afo0wOLqgHcBX_hGczG47zWV5d59U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834248779971-r3c0b8v9g2oqib425d968tt6lg63jtmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
